@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Little Universe ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root{
+  --night:#05071d;
+  --navy:#0b1035;
+  --lav:#bcaeea;
+  --pink:#f4b7cf;
+  --cream:#fff0d8;
+  --paper:#fff0dc;
+  --ink:#453752;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--night);
+  color:white;
+  font-family:"Quicksand",sans-serif;
+  overflow-x:hidden;
+}
+
+/* ---------- DREAMY SPACE ---------- */
+
+.space{
+  position:fixed;
+  inset:0;
+  z-index:-10;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 40%,rgba(80,73,150,.28),transparent 35%),
+    radial-gradient(circle at 15% 70%,rgba(91,65,130,.22),transparent 25%),
+    radial-gradient(circle at 85% 20%,rgba(64,92,160,.20),transparent 25%),
+    linear-gradient(180deg,#03051a 0%,#090c2c 55%,#050719 100%);
+}
+
+.stars,
+.stars2,
+.stars3{
+  position:absolute;
+  inset:-50%;
+  background-repeat:repeat;
+  pointer-events:none;
+}
+
+.stars{
+  background-image:
+    radial-gradient(circle,rgba(255,255,255,.95) 0 1px,transparent 1.5px),
+    radial-gradient(circle,rgba(255,222,235,.8) 0 1px,transparent 1.5px);
+  background-size:97px 113px,173px 149px;
+  animation:starDrift 45s linear infinite;
+  opacity:.65;
+}
+
+.stars2{
+  background-image:
+    radial-gradient(circle,rgba(190,203,255,.9) 0 1px,transparent 1.6px);
+  background-size:137px 181px;
+  animation:starDrift 70s linear infinite reverse;
+  opacity:.45;
+}
+
+.stars3{
+  background-image:
+    radial-gradient(circle,rgba(255,240,210,.95) 0 1.5px,transparent 2px);
+  background-size:257px 221px;
+  animation:starDrift 100s linear infinite;
+  opacity:.5;
+}
+
+@keyframes starDrift{
+  to{
+    transform:translate(100px,160px);
+  }
+}
+
+.milky{
+  position:absolute;
+  width:150%;
+  height:45%;
+  left:-25%;
+  top:28%;
+  transform:rotate(-17deg);
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(207,202,255,.16),
+      rgba(170,157,224,.08) 35%,
+      transparent 68%
+    );
+  filter:blur(20px);
+  opacity:.8;
+}
+
+.nebula{
+  position:absolute;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  filter:blur(55px);
+  opacity:.18;
+}
+
+.n1{
+  left:-180px;
+  top:25%;
+  background:#bd7bc0;
+}
+
+.n2{
+  right:-170px;
+  top:8%;
+  background:#7198df;
+}
+
+.n3{
+  left:40%;
+  bottom:-260px;
+  background:#d38fb3;
+}
+
+/* ---------- NAV ---------- */
+
+nav{
+  position:fixed;
+  top:15px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:50;
+  display:flex;
+  justify-content:center;
+  gap:7px;
+  flex-wrap:wrap;
+  width:min(95%,850px);
+}
+
+nav a{
+  color:#43384f;
+  background:rgba(255,240,220,.94);
+  text-decoration:none;
+  padding:7px 12px;
+  border-radius:999px;
+  border:2px solid rgba(255,255,255,.7);
+  box-shadow:0 4px 0 rgba(130,102,122,.7);
+  font-size:11px;
+  font-weight:700;
+  transition:.25s;
+}
+
+nav a:hover{
+  transform:translateY(-3px) rotate(-1deg);
+}
+
+/* ---------- GENERAL ---------- */
+
+section{
+  min-height:100vh;
+  padding:110px 22px 80px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+
+h1,h2,h3{
+  font-family:"Caveat",cursive;
+}
+
+h1{
+  font-size:clamp(62px,13vw,120px);
+  line-height:.8;
+  text-align:center;
+  color:#fff3ee;
+  text-shadow:
+    0 0 25px rgba(255,205,230,.45),
+    5px 5px 0 rgba(100,82,133,.7);
+}
+
+h2{
+  font-size:clamp(42px,8vw,70px);
+  color:#ffece9;
+  text-shadow:0 0 20px rgba(255,195,220,.2);
+}
+
+.subtitle{
+  max-width:650px;
+  text-align:center;
+  line-height:1.8;
+  color:#dcd8eb;
+  margin-top:15px;
+}
+
+.paper-title{
+  position:relative;
+  background:var(--paper);
+  color:var(--ink);
+  padding:18px 32px 15px;
+  text-align:center;
+  transform:rotate(-1.5deg);
+  box-shadow:7px 9px 0 rgba(0,0,0,.22);
+  clip-path:polygon(2% 5%,97% 1%,100% 94%,4% 100%);
+}
+
+.paper-title:before{
+  content:"";
+  position:absolute;
+  top:-8px;
+  left:50%;
+  transform:translateX(-50%) rotate(-2deg);
+  width:90px;
+  height:22px;
+  background:rgba(255,213,186,.7);
+}
+
+.paper-title small{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:3px;
+}
+
+.paper-title h2{
+  color:var(--ink);
+  margin-top:4px;
+}
+
+/* ---------- HOME ---------- */
+
+.hero-stars{
+  display:flex;
+  gap:20px;
+  color:#ffe5a8;
+  font-size:22px;
+  margin-bottom:20px;
+  animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+  from{opacity:.45}
+  to{opacity:1}
+}
+
+.astronauts{
+  margin:38px 0 20px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  font-size:82px;
+  animation:floatCouple 5s ease-in-out infinite;
+  filter:drop-shadow(0 10px 20px rgba(0,0,0,.4));
+}
+
+@keyframes floatCouple{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-20px)}
+}
+
+.heart-orbit{
+  position:relative;
+  width:210px;
+  height:30px;
+  margin-top:-25px;
+}
+
+.heart-orbit:before{
+  content:"♡";
+  position:absolute;
+  left:50%;
+  top:0;
+  color:#ffb9d0;
+  font-size:30px;
+  animation:orbitHeart 3s ease-in-out infinite;
+}
+
+@keyframes orbitHeart{
+  0%{transform:translateX(-90px) scale(.7)}
+  50%{transform:translateX(0) scale(1.2)}
+  100%{transform:translateX(90px) scale(.7)}
+}
+
+.rocket{
+  position:absolute;
+  right:8%;
+  bottom:22%;
+  font-size:45px;
+  transform:rotate(-20deg);
+  animation:rocketFloat 7s linear infinite;
+}
+
+@keyframes rocketFloat{
+  0%{
+    right:-10%;
+    bottom:18%;
+    opacity:0;
+  }
+  10%{opacity:1}
+  90%{opacity:1}
+  100%{
+    right:110%;
+    bottom:65%;
+    opacity:0;
+  }
+}
+
+.shooting-star{
+  position:absolute;
+  width:90px;
+  height:2px;
+  background:linear-gradient(90deg,transparent,#fff,#ffd9e7);
+  transform:rotate(-30deg);
+  animation:shoot 8s linear infinite;
+  opacity:0;
+}
+
+.ss1{
+  top:25%;
+  left:-10%;
+  animation-delay:1s;
+}
+
+.ss2{
+  top:50%;
+  left:-15%;
+  animation-delay:5s;
+}
+
+@keyframes shoot{
+  0%{
+    transform:translate(0,0) rotate(-30deg);
+    opacity:0;
+  }
+  5%{opacity:1}
+  25%{
+    transform:translate(500px,280px) rotate(-30deg);
+    opacity:0;
+  }
+  100%{opacity:0}
+}
+
+.button{
+  display:inline-block;
+  margin-top:30px;
+  color:#513a4b;
+  background:#ffb8cd;
+  border:3px solid #ffe1e8;
+  border-radius:999px;
+  padding:14px 24px;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 6px 0 #9e6881;
+  transition:.25s;
+}
+
+.button:hover{
+  transform:translateY(3px);
+  box-shadow:0 3px 0 #9e6881;
+}
+
+/* ---------- CONSTELLATION ---------- */
+
+.constellation{
+  position:relative;
+  width:min(900px,100%);
+  height:520px;
+  margin-top:35px;
+}
+
+.constellation svg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+}
+
+.constellation path{
+  fill:none;
+  stroke:#f2c8d9;
+  stroke-width:2;
+  stroke-dasharray:7 9;
+  opacity:.7;
+}
+
+.memory-star{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  width:115px;
+  height:115px;
+  border:0;
+  background:transparent;
+  color:white;
+  cursor:pointer;
+  font-family:"Caveat";
+  font-size:18px;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.memory-star span{
+  display:grid;
+  place-items:center;
+  width:35px;
+  height:35px;
+  margin:auto;
+  border-radius:50%;
+  background:#fff1bd;
+  color:#6e5473;
+  box-shadow:0 0 28px #fff0b0;
+  font-family:sans-serif;
+  font-size:17px;
+  animation:starPulse 2.5s infinite;
+}
+
+@keyframes starPulse{
+  50%{
+    box-shadow:0 0 45px #fff0b0;
+    transform:scale(1.12);
+  }
+}
+
+.memory-star:hover{
+  transform:translate(-50%,-50%) scale(1.12);
+}
+
+.ms1{left:13%;top:65%}
+.ms2{left:31%;top:30%}
+.ms3{left:50%;top:58%}
+.ms4{left:68%;top:24%}
+.ms5{left:87%;top:54%}
+
+.constellation-label{
+  position:absolute;
+  left:50%;
+  bottom:3%;
+  transform:translateX(-50%);
+  color:#e8d9e6;
+  font-family:"Caveat";
+  font-size:22px;
+}
+
+/* ---------- PLANETS ---------- */
+
+.planet-area{
+  width:min(950px,100%);
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:30px;
+  margin-top:45px;
+}
+
+.planet{
+  border:0;
+  background:transparent;
+  color:white;
+  cursor:pointer;
+  font-family:"Caveat";
+  font-size:21px;
+  transition:.25s;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.planet:hover{
+  transform:translateY(-10px);
+}
+
+.planet-body{
+  width:135px;
+  height:135px;
+  border-radius:50%;
+  margin:auto auto 12px;
+  display:grid;
+  place-items:center;
+  font-size:50px;
+  box-shadow:
+    inset -25px -18px 35px rgba(0,0,0,.3),
+    0 0 45px rgba(205,190,255,.2);
+  position:relative;
+  overflow:hidden;
+}
+
+.planet-body:after{
+  content:"";
+  position:absolute;
+  width:170px;
+  height:35px;
+  border:5px solid rgba(255,245,232,.55);
+  border-radius:50%;
+  transform:rotate(-20deg);
+}
+
+.p1{
+  background:radial-gradient(circle at 30% 25%,#ffd4e0,#bc718f);
+}
+
+.p2{
+  background:radial-gradient(circle at 30% 25%,#d4e7ff,#6079b5);
+}
+
+.p3{
+  background:radial-gradient(circle at 30% 25%,#e2d5ff,#806ba8);
+}
+
+.p4{
+  background:radial-gradient(circle at 30% 25%,#ffe9ba,#b77d77);
+}
+
+/* ---------- MEMORIES ---------- */
+
+.polaroids{
+  width:min(950px,100%);
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:35px;
+  margin-top:40px;
+  align-items:start;
+}
+
+.polaroid{
+  background:#fff8ed;
+  color:#4b3a4d;
+  padding:12px 12px 26px;
+  box-shadow:
+    7px 10px 0 rgba(0,0,0,.25),
+    0 0 30px rgba(255,205,230,.12);
+  cursor:pointer;
+  transition:.4s ease;
+  position:relative;
+  border-radius:2px;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.polaroid:nth-child(1){
+  transform:rotate(-4deg);
+}
+
+.polaroid:nth-child(2){
+  transform:rotate(3deg);
+}
+
+.polaroid:hover{
+  transform:translateY(-14px) rotate(0deg) scale(1.04);
+  box-shadow:
+    10px 18px 0 rgba(0,0,0,.25),
+    0 0 45px rgba(255,190,220,.3);
+  z-index:5;
+}
+
+.polaroid img{
+  width:100%;
+  height:245px;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+  background:#151632;
+  border-radius:1px;
+}
+
+.polaroid:before{
+  content:"";
+  position:absolute;
+  width:70px;
+  height:20px;
+  background:rgba(255,214,191,.72);
+  top:-9px;
+  left:50%;
+  transform:translateX(-50%) rotate(-2deg);
+  z-index:3;
+  box-shadow:0 2px 5px rgba(0,0,0,.08);
+}
+
+.polaroid p{
+  font-family:"Caveat";
+  text-align:center;
+  font-size:23px;
+  margin-top:10px;
+}
+
+/* ---------- LOVE KIT ---------- */
+
+.backpack{
+  width:min(690px,100%);
+  margin-top:55px;
+  padding:45px 35px 35px;
+  border-radius:80px 80px 45px 45px;
+  background:linear-gradient(145deg,#e9afc2,#b77f9d);
+  border:7px solid #ffdfe7;
+  box-shadow:
+    0 20px 0 #6e536f,
+    0 30px 60px rgba(0,0,0,.35);
+  position:relative;
+}
+
+.backpack:before{
+  content:"";
+  position:absolute;
+  width:150px;
+  height:60px;
+  border:8px solid #ffdfe7;
+  border-bottom:0;
+  border-radius:80px 80px 0 0;
+  top:-55px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.backpack-title{
+  background:#fff0dc;
+  color:#4c394d;
+  width:max-content;
+  max-width:100%;
+  margin:-62px auto 30px;
+  padding:11px 18px;
+  border-radius:18px;
+  font-weight:700;
+  position:relative;
+}
+
+.kit{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.kit button{
+  min-height:135px;
+  border:3px solid #fff2e6;
+  border-radius:24px;
+  color:#4d394c;
+  font-family:"Caveat";
+  font-size:23px;
+  cursor:pointer;
+  transition:.25s;
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
+}
+
+.kit button:hover{
+  transform:scale(1.04) rotate(-1deg);
+}
+
+.k1{background:#ffd0dd}
+.k2{background:#c8dcf2}
+.k3{background:#ecd3ad}
+.k4{background:#d4c3e8}
+
+/* ---------- FINAL ---------- */
+
+.final-message{
+  max-width:700px;
+  text-align:center;
+  margin-top:30px;
+}
+
+.moon{
+  width:350px;
+  height:175px;
+  margin-top:55px;
+  border-radius:350px 350px 0 0;
+  background:
+    radial-gradient(circle at 25% 35%,#ddd5e3 0 4px,transparent 5px),
+    radial-gradient(circle at 65% 55%,#aaa0bc 0 8px,transparent 9px),
+    radial-gradient(circle at 80% 30%,#bcb2c9 0 5px,transparent 6px),
+    #cfc4d8;
+  position:relative;
+  box-shadow:
+    inset -25px -5px 0 #a79cb7,
+    0 -10px 40px rgba(255,232,246,.15);
+}
+
+.moon-couple{
+  position:absolute;
+  top:-85px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:72px;
+  white-space:nowrap;
+  animation:floatCouple 4s ease-in-out infinite;
+}
+
+.final-stars{
+  font-size:25px;
+  color:#ffe6a9;
+  letter-spacing:15px;
+  margin-top:25px;
+}
+
+.secret{
+  margin-top:28px;
+  color:#d6cde2;
+  font-family:"Caveat";
+  font-size:21px;
+}
+
+.secret-star{
+  display:inline-block;
+  margin-top:10px;
+  color:#fff0a8;
+  cursor:pointer;
+  font-size:28px;
+  transition:.3s;
+  text-shadow:0 0 15px #fff0a8;
+  padding:10px;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.secret-star:hover{
+  transform:scale(1.5) rotate(20deg);
+}
+
+/* ---------- MODAL ---------- */
+
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  background:rgba(2,4,18,.82);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.modal.show{
+  display:flex;
+}
+
+.modal-card{
+  width:min(530px,100%);
+  max-height:85vh;
+  overflow-y:auto;
+  background:#fff0dc;
+  color:#49364b;
+  padding:32px;
+  border-radius:25px;
+  border:5px solid #fff8ef;
+  box-shadow:12px 14px 0 #66516d;
+  text-align:center;
+  animation:pop .35s ease;
+}
+
+@keyframes pop{
+  from{
+    transform:scale(.7) rotate(-4deg);
+    opacity:0;
+  }
+  to{
+    transform:scale(1) rotate(0);
+    opacity:1;
+  }
+}
+
+.modal-card h2{
+  color:#594157;
+  font-size:42px;
+}
+
+.modal-card p{
+  margin:17px 0;
+  line-height:1.8;
+  white-space:pre-wrap;
+}
+
+.close{
+  border:0;
+  border-radius:999px;
+  padding:11px 22px;
+  background:#ffb7ca;
+  color:#4d3548;
+  font-weight:700;
+  cursor:pointer;
+  touch-action:manipulation;
+}
+
+/* ---------- SECRET UNIVERSE ---------- */
+
+.secret-universe{
+  display:none;
+}
+
+.secret-universe.show{
+  display:block;
+  position:fixed;
+  inset:0;
+  z-index:120;
+  background:
+    radial-gradient(circle at 50% 45%,rgba(121,92,177,.35),transparent 35%),
+    #03051a;
+  overflow:hidden;
+  text-align:center;
+  padding:35px 20px;
+  animation:fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+.secret-universe .stars-secret{
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(circle,#fff 0 1px,transparent 1.5px),
+    radial-gradient(circle,#ffd9ea 0 1px,transparent 1.5px);
+  background-size:83px 97px,141px 151px;
+  animation:starDrift 35s linear infinite;
+}
+
+.secret-content{
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.secret-astronauts{
+  font-size:90px;
+  animation:floatCouple 4s infinite;
+}
+
+.secret-content h2{
+  margin-top:25px;
+  font-size:55px;
+}
+
+.secret-content p{
+  max-width:600px;
+  margin-top:20px;
+  line-height:1.9;
+  color:#e9e1ee;
+}
+
+.close-secret{
+  margin-top:30px;
+  border:0;
+  background:#ffb8cd;
+  color:#4d3548;
+  padding:13px 23px;
+  border-radius:999px;
+  font-weight:700;
+  cursor:pointer;
+  touch-action:manipulation;
+}
+
+footer{
+  padding:35px;
+  text-align:center;
+  color:#9894b0;
+  font-size:12px;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:650px){
+
+  nav{
+    top:8px;
+    width:96%;
+    gap:5px;
+  }
+
+  nav a{
+    font-size:9px;
+    padding:6px 8px;
+  }
+
+  section{
+    padding-left:16px;
+    padding-right:16px;
+  }
+
+  h1{
+    font-size:clamp(55px,15vw,85px);
+  }
+
+  .astronauts{
+    font-size:62px;
+  }
+
+  .constellation{
+    height:430px;
+  }
+
+  .memory-star{
+    width:80px;
+    font-size:15px;
+  }
+
+  .memory-star span{
+    width:28px;
+    height:28px;
+  }
+
+  .kit{
+    grid-template-columns:1fr;
+  }
+
+  .backpack{
+    padding:45px 18px 25px;
+    border-width:5px;
+  }
+
+  .kit button{
+    min-height:120px;
+  }
+
+  .moon{
+    width:290px;
+    height:145px;
+  }
+
+  .secret-content{
+    padding:20px 10px;
+  }
+
+  .secret-content h2{
+    font-size:43px;
+  }
+
+  .secret-content p{
+    font-size:14px;
+    line-height:1.7;
+    max-height:45vh;
+    overflow-y:auto;
+  }
+
+  .secret-astronauts{
+    font-size:65px;
+  }
+
+  .polaroids{
+    grid-template-columns:1fr;
+    width:min(330px,100%);
+    gap:45px;
+  }
+
+  .polaroid img{
+    height:300px;
+  }
+
+  .polaroid:nth-child(1){
+    transform:rotate(-4deg);
+  }
+
+  .polaroid:nth-child(2){
+    transform:rotate(4deg);
+  }
+
+  .modal{
+    padding:15px;
+  }
+
+  .modal-card{
+    padding:25px 20px;
+    max-height:82vh;
+  }
+
+  .modal-card h2{
+    font-size:36px;
+  }
+
+  .modal-card p{
+    font-size:14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- DREAMY BACKGROUND -->
+
+<div class="space">
+
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+
+  <div class="milky"></div>
+
+  <div class="nebula n1"></div>
+  <div class="nebula n2"></div>
+  <div class="nebula n3"></div>
+
+  <div class="shooting-star ss1"></div>
+  <div class="shooting-star ss2"></div>
+
+</div>
+
+
+<!-- NAV -->
+
+<nav>
+  <a href="#home">♡ home</a>
+  <a href="#story">🌙 our story</a>
+  <a href="#why">🪐 why you</a>
+  <a href="#memories">📸 memories</a>
+  <a href="#kit">💌 love kit</a>
+  <a href="#ending">✦ end</a>
+</nav>
+
+
+<!-- HOME -->
+
+<section id="home">
+
+  <div class="hero-stars">
+    ✦ · ˚ ★ ˚ · ✧ · ˚ ★ ˚ · ✦
+  </div>
+
+  <p class="subtitle">
+    somewhere between all the stars,
+  </p>
+
+  <h1>
+    I FOUND YOU. ♡
+  </h1>
+
+  <div class="astronauts">
+    👩‍🚀　💗　👨‍🚀
+  </div>
+
+  <div class="heart-orbit"></div>
+
+  <p class="subtitle">
+    two tiny astronauts <br>
+    one ridiculously big universe
+  </p>
+
+  <a class="button" href="#story">
+    💕enter our universe ♡
+  </a>
+
+  <div class="rocket">
+    🚀
+  </div>
+
+</section>
+
+
+<!-- MISSION 01 -->
+
+<section id="story">
+
+  <div class="paper-title">
+
+    <small>
+      🌙 CONSTELLATION 01
+    </small>
+
+    <h2>
+      How We Started ♡
+    </h2>
+
+    <p>
+      our story, written in stars...
+    </p>
+
+  </div>
+
+  <p class="subtitle">
+    Every little moment became another star.
+    Click them to remember where our little universe began.
+  </p>
+
+  <div class="constellation">
+
+    <svg viewBox="0 0 900 520" preserveAspectRatio="none">
+      <path d="M115 338 C180 220,220 150,280 156 S410 310,450 302 S570 105,612 125 S760 275,780 280"/>
+    </svg>
+
+
+    <button
+      class="memory-star ms1"
+      data-title="⭐ FIRST CONTACT"
+      data-text="21 May 21:55 — the day our little universe got its first signal. vans and i was on call and i asked her why u didnt text me and you said cuz she didnt put a story so i put up a story just for you. i don't even put stories on my main like reels wghra but just for you i did. grateful that i did baby."
+    >
+      <span>✦</span>
+      first contact
+    </button>
+
+
+    <button
+      class="memory-star ms2"
+      data-title="🌙 THE BEGINNING"
+      data-text="it all started with hey btw i never thought that the simple hey would turn into something so special but im glad it did. you asking my stream and me telling you bhot bekar stream hai and you said commerce like srsly lol. asking me about my interests, getting to know each other and fir mai chali gyi thi cuz hahah meri mom mujhe mar deti lol vaise toh i wanted to talk more cuz tu itna interesting sa banda lgra tha but sadly :<."
+    >
+      <span>✦</span>
+      the beginning
+    </button>
+
+
+    <button
+      class="memory-star ms3"
+      data-title="🚀 ENTERING ORBIT"
+      data-text="09 June — THE DAY I WILL NEVER FORGETTT BEST DAYY BEST NIGHT I RMBR EVRYTHING THE FEELING THE EACT TIME 4:32am i was upset about smth and you saying AUR SUN ahhh i thought gaali dega but you were like i love you and i still rmbr the feeling baby it was so great i was on cloud 9 no joke if i get a chance to go back i would def go. im so happy u chose me i mean im the luckiest girl 9/6/26<3. ♡"
+    >
+      <span>✦</span>
+      entering orbit
+    </button>
+
+
+    <button
+      class="memory-star ms4"
+      data-title="💫 MY FAVOURITE MOMENT"
+      data-text="watching movies together on vid call vaise toh mai bs tereko ghurti thi heheh i just couldn't take my eyes off you. my eyes used get stuck on you. everything i do with you its my fav. our date 2 august sunday is one of my favs."
+    >
+      <span>✦</span>
+      favourite moment
+    </button>
+
+
+    <button
+      class="memory-star ms5"
+      data-title="🌎 US"
+      data-text="playing roblox with you and me crying on some stupid level and you jst laughing it was kinda funny tho heheh."
+    >
+      <span>✦</span>
+      us
+    </button>
+
+
+    <div class="constellation-label">
+      ✧ the constellation of us ✧
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MISSION 02 -->
+
+<section id="why">
+
+  <div class="paper-title">
+
+    <small>
+      🪐 CONSTELLATION 02
+    </small>
+
+    <h2>
+      Why I Chose You ♡
+    </h2>
+
+    <p>
+      classified information from my heart...
+    </p>
+
+  </div>
+
+  <p class="subtitle">
+    Four little planets. Four reasons.
+    There are probably a million more.
+  </p>
+
+
+  <div class="planet-area">
+
+
+    <button
+      class="planet"
+      data-title="🪐 PLANET OF LAUGHTER"
+      data-text="Because you make me laugh when I least expect it. Even the most ordinary moments become memories with you. you jst make evrything by just being yourself. you doing silly things on call jst to make me laugh its jst so cute makes me fall for you even more. ♡"
+    >
+
+      <div class="planet-body p1">
+        💗
+      </div>
+
+      because you make me laugh
+
+    </button>
+
+
+    <button
+      class="planet"
+      data-title="🌙 PLANET OF HOME"
+      data-text="Because somehow talking to you can make the whole universe feel a little quieter. talking to you makes me forget all my problems. my stress it just vanishes. you feel like home ry and i dont wanna get homeless ♡"
+    >
+
+      <div class="planet-body p2">
+        🌙
+      </div>
+
+      because you feel like home
+
+    </button>
+
+
+    <button
+      class="planet"
+      data-title="⭐ PLANET OF EVERYTHING"
+      data-text="Because you became the person I want to tell everything to — the random things, the good things, the silly things. my fav person. A person i can run up to crying and end up laughing. you complete me ryan i love you ♡"
+    >
+
+      <div class="planet-body p3">
+        ⭐
+      </div>
+
+      because you're my person
+
+    </button>
+
+
+    <button
+      class="planet"
+      data-title="☄️ TOP SECRET"
+      data-text="Because you are ridiculously, unfairly, astronomically cute. i just wanna baby you all the time. at last i would choose you har 7 janam mai. cuz you're the best <3 😭♡"
+    >
+
+      <div class="planet-body p4">
+        ☄️
+      </div>
+
+      highly classified
+
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- MISSION 03 -->
+
+<section id="memories">
+
+  <div class="paper-title">
+
+    <small>
+      📸 CONSTELLATION 03
+    </small>
+
+    <h2>
+      Memories Collected ♡
+    </h2>
+
+    <p>
+      little pieces of our universe...
+    </p>
+
+  </div>
+
+
+  <p class="subtitle">
+    two little pieces of our universe,
+    saved forever. ♡
+  </p>
+
+
+  <div class="polaroids">
+
+
+    <div
+      class="polaroid"
+      data-title="📸 MEMORY FROM OUR ORBIT"
+      data-text="one of my favourite little memories with you. ♡"
+    >
+
+      <img
+        src="cutu.png"
+        alt="Our memory"
+      >
+
+      <p>
+        one of my favourites ♡
+      </p>
+
+    </div>
+
+
+    <div
+      class="polaroid"
+      data-title="💬 SIGNAL ARCHIVE"
+      data-text="a tiny piece of us that i wanted to keep forever. ♡"
+    >
+
+      <img
+        src="ly.jpeg"
+        alt="Our little moment"
+      >
+
+      <p>
+        our little moment ♡
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- MISSION 04 -->
+
+<section id="kit">
+
+  <div class="paper-title">
+
+    <small>
+      💌 CONSTELLATION 04
+    </small>
+
+    <h2>
+      Emergency Love Kit ♡
+    </h2>
+
+    <p>
+      for when your astronaut needs me...
+    </p>
+
+  </div>
+
+
+  <p class="subtitle">
+    Four little messages, saved for four little emergencies.
+  </p>
+
+
+  <div class="backpack">
+
+    <div class="backpack-title">
+      🎒 ASTRONAUT SURVIVAL KIT
+    </div>
+
+
+    <div class="kit">
+
+
+      <!-- EMERGENCY BUTTON 1 -->
+
+      <button
+        class="k1"
+        data-title="💌 OPEN WHEN YOU MISS ME"
+        data-text="awww cutu is missing me well you've opened this miss me letter toh first of all i love you the most you're my baby and if you're missing me apko text krna chahiye mereko cuz duhh well jo bhi hai miss krra h toh humari pics dekh you'll feel alot better just know that i love you from the bottom of my heart i wish i was there to hug you and kiss you cuz my baby is missing me but i can't so i hope this letter works jb bhi aapko missing ho meri just look at youself where your dil is and look inside it ik not possible but yk mai apke dil mai hu so im always with you heheh (cheesy ik) but okayy hope mera cutu mereko miss na kre zyda cuz aap pgl ho jaoge aise toh well at last you're the best bf ly"
+      >
+
+        💌<br>
+        open when<br>
+        you miss me
+
+      </button>
+
+
+      <!-- EMERGENCY BUTTON 2 -->
+
+      <button
+        class="k2"
+        data-title="🌧️ OPEN WHEN YOU ARE SAD"
+        data-text="ry baby ik you're sad but this difficult time will pass away doesn't matter how big the problem is im always here for you you can share anything with me and i won't judge you after reading this you should be texting me and sharing your problem always rmbr that i love you no matter what don't be sad my love."
+      >
+
+        🌧️<br>
+        open when<br>
+        you're sad
+
+      </button>
+
+
+      <!-- EMERGENCY BUTTON 3 -->
+
+      <button
+        class="k3"
+        data-title="⚡ OPEN WHEN WE FIGHT"
+        data-text="you're opening this and im sorry that we are fighting but im sure we will solve the fight and go back to the lovey dovey thingy heheh dw baby i still love you even when we are fighting i want no one but you cuz you're the best and i cant afford to loose you ladd ke bhi tere pas hi aungi 3-4 gaali dungi but teri hi rahungi so don't worry and just take a chill pill."
+      >
+
+        ⚡<br>
+        open when<br>
+        we fight
+
+      </button>
+
+
+      <!-- EMERGENCY BUTTON 4 -->
+
+      <button
+        class="k4"
+        data-title="🫂 OPEN WHEN YOU NEED REASSURANCE"
+        data-text="first of alll tu ye open bhi kyu krra h pglu tu best hai you shouldn't feel low you're my cutu baby and my best freind. you're strong,intelligent, mature. you're eveyrhting a girl wants in a man and im so lucky that i got a man like you right by my side. im the happiest when im talking to you calls ho ya text i just love talking to you. i never wanna lose you not even i my dreams. the thought of losing makes me cry soch itna pyaar krti hu mai terese."
+      >
+
+        🫂<br>
+        open when<br>
+        you need reassurance
+
+      </button>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- END -->
+
+<section id="ending">
+
+  <div class="hero-stars">
+    ✦ · ˚ ★ · ✧ · ˚ ★ · ✦
+  </div>
+
+
+  <p class="subtitle">
+    after travelling through every little corner of our universe...
+  </p>
+
+
+  <h2>
+    I'd choose you.
+  </h2>
+
+
+  <div class="moon">
+
+    <div class="moon-couple">
+      👩‍🚀　👨‍🚀
+    </div>
+
+  </div>
+
+
+  <h2>
+    in every universe. ♡
+  </h2>
+
+
+  <p class="final-message">
+    mission complete.<br>
+    but honestly.. I don't think I ever want this mission to end.
+  </p>
+
+
+  <div class="final-stars">
+    ★　✦　★　✧　★
+  </div>
+
+
+  <div class="secret">
+
+    psst... one last star is hiding here...
+
+    <br>
+
+    <span
+      class="secret-star"
+      id="secretStar"
+    >
+      ✦
+    </span>
+
+  </div>
+
+
+  <a class="button" href="#home">
+    ↻ restart our universe ♡
+  </a>
+
+</section>
+
+
+<footer>
+  made from tiny stars, bad jokes & a ridiculous amount of love ♡
+</footer>
+
+
+<!-- NORMAL POPUP -->
+
+<div
+  class="modal"
+  id="modal"
+>
+
+  <div class="modal-card">
+
+    <h2 id="modalTitle"></h2>
+
+    <p id="modalText"></p>
+
+    <button
+      class="close"
+      id="closeModal"
+    >
+      okay ♡
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- SECRET UNIVERSE -->
+
+<div
+  class="secret-universe"
+  id="secretUniverse"
+>
+
+  <div class="stars-secret"></div>
+
+
+  <div class="secret-content">
+
+
+    <div class="secret-astronauts">
+      👩‍🚀　💗　👨‍🚀
+    </div>
+
+
+    <h2>
+      you found our<br>
+      secret universe. ♡
+    </h2>
+
+
+    <p>
+
+      If the universe is really this enormous
+      then I think finding you is probably my
+      fav thing that has ever happened to me.
+
+      <br><br>
+
+      Out of all the stars all the planets
+      all the possible worlds
+      somehow I got you heheheh &lt;3
+
+      <br><br>
+
+      And if I had to choose again
+      I'd still choose you.
+
+      ♡
+
+    </p>
+
+
+    <button
+      class="close-secret"
+      id="closeSecret"
+    >
+      keep this little universe secret ♡
+    </button>
+
+
+  </div>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   UNIVERSAL POPUP SYSTEM
+   This replaces the old inline onclick system.
+   It is much safer on phones.
+   ========================================================= */
+
+const modal = document.getElementById("modal");
+const modalTitle = document.getElementById("modalTitle");
+const modalText = document.getElementById("modalText");
+const closeModal = document.getElementById("closeModal");
+
+
+function openNote(title, text){
+
+  modalTitle.textContent = title;
+  modalText.textContent = text;
+
+  modal.classList.add("show");
+
+  document.body.style.overflow = "hidden";
+}
+
+
+function closeNote(){
+
+  modal.classList.remove("show");
+
+  document.body.style.overflow = "";
+}
+
+
+/* Make ALL buttons/cards with data-title clickable */
+
+document.querySelectorAll("[data-title]").forEach(function(element){
+
+  element.addEventListener("click", function(){
+
+    const title = element.dataset.title;
+    const text = element.dataset.text;
+
+    openNote(title, text);
+
+  });
+
+});
+
+
+/* Close button */
+
+closeModal.addEventListener("click", function(){
+
+  closeNote();
+
+});
+
+
+/* Close popup by tapping outside */
+
+modal.addEventListener("click", function(event){
+
+  if(event.target === modal){
+
+    closeNote();
+
+  }
+
+});
+
+
+/* Close popup with phone/browser back-style escape */
+
+document.addEventListener("keydown", function(event){
+
+  if(event.key === "Escape"){
+
+    closeNote();
+
+  }
+
+});
+
+
+/* =========================================================
+   SECRET UNIVERSE
+   ========================================================= */
+
+let secretClicks = 0;
+
+const secretStar = document.getElementById("secretStar");
+const secretUniverse = document.getElementById("secretUniverse");
+const closeSecretButton = document.getElementById("closeSecret");
+
+
+secretStar.addEventListener("click", function(){
+
+  secretClicks++;
+
+
+  if(secretClicks === 1){
+
+    openNote(
+      "✦ wait...",
+      "You found a hidden star. But I think there's something behind it..."
+    );
+
+  }
+
+
+  else if(secretClicks === 2){
+
+    openNote(
+      "🌙 almost there...",
+      "One more little tap, astronaut. ♡"
+    );
+
+  }
+
+
+  else if(secretClicks === 3){
+
+    closeNote();
+
+    secretUniverse.classList.add("show");
+
+    secretClicks = 0;
+
+  }
+
+});
+
+
+/* Close secret universe */
+
+closeSecretButton.addEventListener("click", function(){
+
+  secretUniverse.classList.remove("show");
+
+});
+
+
+/* =========================================================
+   MOBILE SAFETY
+   ========================================================= */
+
+document.addEventListener("touchstart", function(){}, {
+  passive:true
+});
+
+</script>
+
+</body>
+</html>
